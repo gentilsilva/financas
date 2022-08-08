@@ -47,7 +47,7 @@ public class ReceitaForm {
 	public void setData(String data) {
 		this.data = data;
 	}
-	
+
 	public boolean isRepeatable(ReceitaRepository receitaRepository) {
 		LocalDate dateIn = LocalDate.parse(data, formatter).with(TemporalAdjusters.firstDayOfMonth());
 		LocalDate dateOff = LocalDate.parse(data, formatter).with(TemporalAdjusters.lastDayOfMonth());

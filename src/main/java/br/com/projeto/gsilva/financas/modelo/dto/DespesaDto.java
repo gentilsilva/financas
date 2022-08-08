@@ -16,6 +16,7 @@ public class DespesaDto {
 	private BigDecimal valor;
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate data;
+	private String categoria;
 	
 	public DespesaDto() {}
 	
@@ -24,8 +25,9 @@ public class DespesaDto {
 		this.descricao = despesa.getDescricao();
 		this.valor = despesa.getValor();
 		this.data = despesa.getData();
+		this.categoria = despesa.getCategoria().toString();
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -57,7 +59,15 @@ public class DespesaDto {
 	public void setData(LocalDate data) {
 		this.data = data;
 	}
-	
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
 	public static List<DespesaDto> convertToListDto(List<Despesa> despesa) {
 		return despesa.stream().map(DespesaDto::new).collect(Collectors.toList());
 	}
@@ -68,6 +78,7 @@ public class DespesaDto {
 		despesaDto.setDescricao(despesa.getDescricao());
 		despesaDto.setValor(despesa.getValor());
 		despesaDto.setData(despesa.getData());
+		despesaDto.setCategoria(despesa.getCategoria().toString());
 		return despesaDto;
 	}	
 	
