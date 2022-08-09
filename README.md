@@ -11,4 +11,4 @@
 * [Descrição do projeto](#descricao-do-projeto)
 
 ## Descrição do projeto
-
+![Versão maven](http://img.shields.io/static/v1?label=Maven&message=v4.0.0&color=BLUE&style=plastic)
