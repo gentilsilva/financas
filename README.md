@@ -30,4 +30,4 @@ API com foco em controle financeiro pessoal. Registrando receitas e despesas do 
 🏗️ Será implementado aos poucos 🏗️
 
 ## Autores
-| [<img src="https://avatars.githubusercontent.com/u/93679402?s=400&u=99636daaeb40b9456b42cb2466a488c4e9a630b9&v=4" width=115><br><sub>Gentil Silva</sub>](https://github.com/GentilSilva) |
+| [<img src="https://avatars.githubusercontent.com/u/93679402?s=400&u=99636daaeb40b9456b42cb2466a488c4e9a630b9&v=4" width=115><br><sub>Gentil Silva</sub>](https://github.com/GentilSilva) | |:---:|
