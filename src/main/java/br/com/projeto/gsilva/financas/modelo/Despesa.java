@@ -25,7 +25,7 @@ public class Despesa {
 	private BigDecimal valor;
 	@NotNull
 	private LocalDate data;
-	@Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.STRING) @NotNull
 	private Categoria categoria = Categoria.OUTRAS;
 	
 	public Despesa() {}

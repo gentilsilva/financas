@@ -37,8 +37,8 @@ public class ReceitaController {
 	
 	@GetMapping
 	@Transactional
-	public List<ReceitaDto> readReceitaList() {
-		return receitaService.readReceitaList();
+	public List<ReceitaDto> readReceitaList(String descricao) {
+		return receitaService.readReceitaList(descricao);
 	}
 	
 	@GetMapping("/{id}")

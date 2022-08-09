@@ -52,18 +52,14 @@ public class DespesaForm {
 	}
 
 	public String getCategoria() {
-		return categoria;
+		if(categoria != null) {
+			return categoria.toUpperCase();
+		}
+		return Categoria.OUTRAS.toString();
 	}
 
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
-	}
-	
-	private String verificaCategoria() {
-		if(categoria != null) {
-			return categoria.toUpperCase();
-		}
-		return "outras".toUpperCase();
 	}
 
 	public boolean isRepeatable(DespesaRepository despesaRepository) {
@@ -78,7 +74,7 @@ public class DespesaForm {
 		despesa.setDescricao(this.getDescricao());
 		despesa.setValor(this.getValor());
 		despesa.setData(date);
-		despesa.setCategoria(Categoria.valueOf(verificaCategoria()));
+		despesa.setCategoria(Categoria.valueOf(getCategoria()));
 		return despesa;
 	}
 	

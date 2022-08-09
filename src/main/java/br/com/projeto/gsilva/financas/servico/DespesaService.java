@@ -1,6 +1,7 @@
 package br.com.projeto.gsilva.financas.servico;
 
 import java.net.URI;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,10 +36,19 @@ public class DespesaService {
 		return ResponseEntity.created(uri).body(despesaDto.convertToDto(despesa));
 	}
 
-	public List<DespesaDto> readDespesaList() {
-		List<Despesa> despesa = despesaRepository.findAll();
+	public List<DespesaDto> readDespesaList(String descricao) {
+		if(descricao == null) {
+			List<Despesa> despesa = despesaRepository.findAll();
+			return DespesaDto.convertToListDto(despesa);			
+		}
+		List<Despesa> despesa = despesaRepository.findByDescricao(descricao);
 		return DespesaDto.convertToListDto(despesa);
 	}
+	
+//	public List<DespesaDto> readDespesaListByYearAndMonth(LocalDate data) {
+//		List<Despesa> despesa = despesaRepository.findAllByDataYear(data);		
+//		return DespesaDto.convertToListDto(despesa);
+//	}
 
 	public ResponseEntity<DespesaDto> readDespesaById(Long id) {
 		Optional<Despesa> despesa = despesaRepository.findById(id);

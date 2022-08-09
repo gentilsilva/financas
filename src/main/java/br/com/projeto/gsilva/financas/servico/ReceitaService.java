@@ -33,8 +33,12 @@ public class ReceitaService {
 		return ResponseEntity.created(uri).body(receitaDto.convertToDto(receita));
 	}
 	
-	public List<ReceitaDto> readReceitaList() {
-		List<Receita> receitas = receitaRepository.findAll();
+	public List<ReceitaDto> readReceitaList(String descricao) {
+		if(descricao == null) {
+			List<Receita> receitas = receitaRepository.findAll();
+			return ReceitaDto.convertToListDto(receitas);			
+		}
+		List<Receita> receitas = receitaRepository.findByDescricao(descricao);
 		return ReceitaDto.convertToListDto(receitas);
 	}
 	
