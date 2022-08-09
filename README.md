@@ -5,7 +5,7 @@
 </p>
 
 ## Índice
-[Título](#titulo)
-[Badges](#badges)
-[Descrição do projeto](#descricao-do-projeto)
+* [Título](#titulo)
+* [Badges](#badges)
+* [Descrição do projeto](#descricao-do-projeto)
 
