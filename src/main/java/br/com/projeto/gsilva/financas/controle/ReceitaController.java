@@ -47,6 +47,13 @@ public class ReceitaController {
 		return receitaService.readReceitaById(id);
 	}
 	
+	@GetMapping("/{ano}/{mes}")
+	@Transactional
+	public List<ReceitaDto> readReceitaListByYearAndMonth(@PathVariable("ano") Integer ano,
+			@PathVariable("mes") Integer mes) {
+		return receitaService.readReceitaListByYearAndMonth(ano, mes);
+	}
+	
 	@PutMapping("/{id}")
 	@Transactional
 	public ResponseEntity<?> updateReceita(@PathVariable("id") Long id, @RequestBody @Valid ReceitaUpdateForm form) {

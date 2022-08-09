@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import br.com.projeto.gsilva.financas.modelo.Despesa;
@@ -18,6 +19,7 @@ public interface DespesaRepository extends JpaRepository<Despesa, Long>{
 
 	public List<Despesa> findAllByData(String data);
 
-//	public List<Despesa> findAllByDataYear(LocalDate data);
+	@Query("SELECT d FROM Despesa d where YEAR(d.data) = ?1 AND MONTH(d.data) = ?2")
+	public List<Despesa> findAllByDataYearAndDataMonth(Integer ano, Integer mes);
 
 }

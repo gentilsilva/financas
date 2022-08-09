@@ -34,6 +34,7 @@ public class Despesa {
 		this.descricao = descricao;
 		this.valor = valor;
 		this.data = data;
+		this.categoria = categoria;
 	}
 	
 	public Long getId() {

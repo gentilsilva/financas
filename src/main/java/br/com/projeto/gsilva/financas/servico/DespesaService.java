@@ -1,7 +1,6 @@
 package br.com.projeto.gsilva.financas.servico;
 
 import java.net.URI;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,11 +43,6 @@ public class DespesaService {
 		List<Despesa> despesa = despesaRepository.findByDescricao(descricao);
 		return DespesaDto.convertToListDto(despesa);
 	}
-	
-//	public List<DespesaDto> readDespesaListByYearAndMonth(LocalDate data) {
-//		List<Despesa> despesa = despesaRepository.findAllByDataYear(data);		
-//		return DespesaDto.convertToListDto(despesa);
-//	}
 
 	public ResponseEntity<DespesaDto> readDespesaById(Long id) {
 		Optional<Despesa> despesa = despesaRepository.findById(id);
@@ -57,6 +51,11 @@ public class DespesaService {
 			return ResponseEntity.ok(despesaDto.convertToDto(despesa.get()));
 		}		
 		return ResponseEntity.notFound().build();
+	}	
+	
+	public List<DespesaDto> readDespesaListByYearAndMonth(Integer ano, Integer mes) {
+		List<Despesa> despesa = despesaRepository.findAllByDataYearAndDataMonth(ano, mes);		
+		return DespesaDto.convertToListDto(despesa);
 	}
 
 	public ResponseEntity<?> updateDespesaById(Long id, @Valid DespesaUpdateForm form) {

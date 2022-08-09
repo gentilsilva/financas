@@ -51,6 +51,11 @@ public class ReceitaService {
 		return ResponseEntity.notFound().build();
 	}
 	
+	public List<ReceitaDto> readReceitaListByYearAndMonth(Integer ano, Integer mes) {
+		List<Receita> receita = receitaRepository.findAllByDataYearAndDataMonth(ano, mes);
+		return ReceitaDto.convertToListDto(receita);
+	}
+	
 	public ResponseEntity<?> updateReceitaById(Long id, ReceitaUpdateForm form) {
 		Optional<Receita> optional = receitaRepository.findById(id);
 //		if(form.isRepeatable(receitaRepository)) {

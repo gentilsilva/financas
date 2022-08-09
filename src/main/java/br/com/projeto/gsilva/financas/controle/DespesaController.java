@@ -1,7 +1,5 @@
 package br.com.projeto.gsilva.financas.controle;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -49,11 +47,12 @@ public class DespesaController {
 		return despesaService.readDespesaById(id);
 	}
 	
-//	@GetMapping("/{ano}")
-//	@Transactional
-//	public List<DespesaDto> readDespesaListByYearAndMonth(@PathVariable Integer ano, LocalDate data) {
-//		return despesaService.readDespesaListByYearAndMonth(data);
-//	}
+	@GetMapping("/{ano}/{mes}")
+	@Transactional
+	public List<DespesaDto> readDespesaListByYearAndMonth(@PathVariable("ano") Integer ano,
+			@PathVariable("mes") Integer mes) {
+		return despesaService.readDespesaListByYearAndMonth(ano, mes);
+	}
 	
 	@PutMapping("/{id}")
 	@Transactional
