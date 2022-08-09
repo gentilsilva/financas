@@ -11,5 +11,5 @@
 * [Descrição do projeto](#descricao-do-projeto)
 
 ## Descrição do projeto
-![Versão financas](http://img.shields.io/static/v1?label=Financas&message=v0.0.1&color=BLUE&style=plastic)
+![Versão financas](http://img.shields.io/static/v1?label=Financas&message=v0.0.1&color=ORANGE&style=plastic)
 ![Data lançada](http://img.shields.io/static/v1?label=Release&message=Agosto&color=GREEN&style=plastic)
