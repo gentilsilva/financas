@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-## Índice
+Índice
 </p>
 * [Título](#titulo)
 * [Badges](#badges)
