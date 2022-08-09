@@ -20,4 +20,6 @@ API com foco em controle financeiro pessoal. Registrando receitas e despesas do 
 </p>
 
 ## Status do projeto
+<h4 align="center">
 🚧 Projeto em construção 🚧
+</h4>
