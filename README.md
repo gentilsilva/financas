@@ -1,4 +1,4 @@
-# Financas Rest API
+<h1 align center> Financas Rest API </h1>
 
-![Imagem de capa FinancasAPI](https://user-images.githubusercontent.com/93679402/183648334-9ab22ccd-95d7-44e7-9f7e-e8618f31aa15.png)
+![Imagem de capa FinancasAPI](https://user-images.githubusercontent.com/93679402/183651675-6fced81a-1c05-45a0-a42b-a29d73578cac.png)
 
