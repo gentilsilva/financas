@@ -9,6 +9,7 @@
 * [Título](#titulo)
 * [Badges](#badges)
 * [Descrição do projeto](#descricao-do-projeto)
+* [Status do projeto](#status-do-projeto)
 
 ## Descrição do projeto
 ![Versão financas](http://img.shields.io/static/v1?label=Financas&message=v0.0.1&color=YELLOW&style=plastic)
@@ -17,3 +18,6 @@
 <p>
 API com foco em controle financeiro pessoal. Registrando receitas e despesas do usuário devolvendo resumos mensais ou por descrição específica.
 </p>
+
+## Status do projeto
+🚧 Projeto em construção 🚧
