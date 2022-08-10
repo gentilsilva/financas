@@ -11,6 +11,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import br.com.projeto.gsilva.financas.modelo.Receita;
 import br.com.projeto.gsilva.financas.modelo.dto.ReceitaDto;
+import br.com.projeto.gsilva.financas.modelo.dto.ResumoDto;
 import br.com.projeto.gsilva.financas.modelo.form.ReceitaForm;
 import br.com.projeto.gsilva.financas.modelo.form.ReceitaUpdateForm;
 import br.com.projeto.gsilva.financas.repositorio.ReceitaRepository;
@@ -54,6 +55,13 @@ public class ReceitaService {
 	public List<ReceitaDto> readReceitaListByYearAndMonth(Integer ano, Integer mes) {
 		List<Receita> receita = receitaRepository.findAllByDataYearAndDataMonth(ano, mes);
 		return ReceitaDto.convertToListDto(receita);
+	}
+	
+// Teste de receitaTotal
+	public ResumoDto readReceitaTotalValorByDataYearAndDataMonth(Integer ano, Integer mes) {
+		ResumoDto resumoDto = new ResumoDto();
+		List<Receita> receita = receitaRepository.findAllByDataYearAndDataMonth(ano, mes);
+		return resumoDto.convertToDto(receita);
 	}
 	
 	public ResponseEntity<?> updateReceitaById(Long id, ReceitaUpdateForm form) {
