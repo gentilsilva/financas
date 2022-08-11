@@ -19,7 +19,7 @@ public interface DespesaRepository extends JpaRepository<Despesa, Long>{
 
 	public List<Despesa> findAllByData(String data);
 
-	@Query("SELECT d FROM Despesa d where YEAR(d.data) = ?1 AND MONTH(d.data) = ?2")
+	@Query("SELECT d FROM Despesa d WHERE YEAR(d.data) = ?1 AND MONTH(d.data) = ?2")
 	public List<Despesa> findAllByDataYearAndDataMonth(Integer ano, Integer mes);
 
 }

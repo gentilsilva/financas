@@ -51,7 +51,7 @@ public class DespesaController {
 	@Transactional
 	public List<DespesaDto> readDespesaListByYearAndMonth(@PathVariable("ano") Integer ano,
 			@PathVariable("mes") Integer mes) {
-		return despesaService.readDespesaListByYearAndMonth(ano, mes);
+		return despesaService.readDespesaListByDataYearAndDataMonth(ano, mes);
 	}
 	
 	@PutMapping("/{id}")

@@ -51,7 +51,7 @@ public class ReceitaController {
 	@Transactional
 	public List<ReceitaDto> readReceitaListByYearAndMonth(@PathVariable("ano") Integer ano,
 			@PathVariable("mes") Integer mes) {
-		return receitaService.readReceitaListByYearAndMonth(ano, mes);
+		return receitaService.readReceitaListByDataYearAndDataMonth(ano, mes);
 	}
 	
 	@PutMapping("/{id}")

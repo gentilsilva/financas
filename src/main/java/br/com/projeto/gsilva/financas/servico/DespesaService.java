@@ -53,7 +53,7 @@ public class DespesaService {
 		return ResponseEntity.notFound().build();
 	}	
 	
-	public List<DespesaDto> readDespesaListByYearAndMonth(Integer ano, Integer mes) {
+	public List<DespesaDto> readDespesaListByDataYearAndDataMonth(Integer ano, Integer mes) {
 		List<Despesa> despesa = despesaRepository.findAllByDataYearAndDataMonth(ano, mes);		
 		return DespesaDto.convertToListDto(despesa);
 	}

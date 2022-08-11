@@ -9,20 +9,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.projeto.gsilva.financas.modelo.dto.ResumoDto;
-import br.com.projeto.gsilva.financas.servico.ReceitaService;
+import br.com.projeto.gsilva.financas.servico.ResumoService;
 
 @RestController
 @RequestMapping("/resumo")
 public class ResumoController {
 	
 	@Autowired
-	ReceitaService receitaService;
+	ResumoService resumoService;
 
 	@GetMapping("/{ano}/{mes}")
 	@Transactional
 	public ResumoDto readReceitaTotalByDataYearAndDataMonth(@PathVariable("ano") Integer ano,
 			@PathVariable("mes") Integer mes) {
-		return receitaService.readReceitaTotalValorByDataYearAndDataMonth(ano, mes);
+		return resumoService.readTotalValorByDataYearAndDataMonth(ano, mes);
 	}
 	
 }

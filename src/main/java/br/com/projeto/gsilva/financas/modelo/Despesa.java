@@ -26,7 +26,7 @@ public class Despesa {
 	@NotNull
 	private LocalDate data;
 	@Enumerated(EnumType.STRING) @NotNull
-	private Categoria categoria = Categoria.OUTRAS;
+	private Categoria categoria;
 	
 	public Despesa() {}
 	
